@@ -81,6 +81,9 @@ jobs:
         release: '12.2.Rel1'
         path-env-var: arm-none-eabi-gcc
 
+    - name: The path will be exported to that environmental variable name
+      run: echo "The output path is $ARM_NONE_EABI_GCC_PATH"
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
