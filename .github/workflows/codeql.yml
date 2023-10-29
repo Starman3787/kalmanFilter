@@ -77,9 +77,14 @@ jobs:
     #     ./location_of_script_within_repo/buildscript.sh
     - name: Install Arm GNU Toolchain (arm-none-eabi-gcc)
       uses: carlosperate/arm-none-eabi-gcc-action@v1
-      # with:
-        # release: '12.2.Rel1'
-        # path-env-var: arm-none-eabi-gcc
+      with:
+        release: '12.2.Rel1'
+
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
+
+    # - run: |
+    #     ./gcc-arm-none-eabi-12.2.1-linux
 
     # - name: The path will be exported to that environmental variable name
     #   run: echo "The output path is $ARM_NONE_EABI_GCC_PATH"
