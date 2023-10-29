@@ -1,5 +1,0 @@
-steps:
-- name: Install Arm GNU Toolchain (arm-none-eabi-gcc)
-  uses: carlosperate/arm-none-eabi-gcc-action@v1
-  with:
-    release: '12.2.Rel1'
