@@ -55,6 +55,7 @@ LFLAGS += -Wl,--no-warn-rwx-segment
 
 AS_SRC = ./src/startup.S
 C_SRC = ./src/main.c
+C_SRC += ./src/init.c
 C_SRC += ./src/drivers/gtu7/gtu7.c
 C_SRC += ./src/drivers/mpu6050/mpu6050.c
 
