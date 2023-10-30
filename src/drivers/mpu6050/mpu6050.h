@@ -1,10 +1,10 @@
-#ifndef DRIVERS_MPU6050_H__
-#define DRIVERS_MPU6050_H__
+#ifndef __DRIVERS_MPU6050_H__
+#define __DRIVERS_MPU6050_H__
 
 #include <stdint.h>
 
-#define MPU6050_PIN_CL     (12)
-#define MPU6050_PIN_DA     (13)
+#define __DRIVERS_MPU6050_H_MPU6050_PIN_CL__    (12)
+#define __DRIVERS_MPU6050_H_MPU6050_PIN_DA__    (13)
 
 int8_t Mpu6050_Init(void);
 int8_t Mpu6050_Start(void);

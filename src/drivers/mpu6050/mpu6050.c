@@ -7,20 +7,20 @@ int8_t Mpu6050_Init(void)
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
     RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;
 
-    GPIOD->MODER |= (0b10 << (MPU6050_PIN_CL * 2)) |
-                    (0b10 << (MPU6050_PIN_DA * 2));
+    GPIOD->MODER |= (0b10 << (__DRIVERS_MPU6050_H_MPU6050_PIN_CL__ * 2)) |
+                    (0b10 << (__DRIVERS_MPU6050_H_MPU6050_PIN_DA__ * 2));
 
-    GPIOD->AFR[1] |= (0b0100 << ((MPU6050_PIN_CL - 8) * 4)) |
-                    (0b0100 << ((MPU6050_PIN_DA - 8) * 4));
+    GPIOD->AFR[1] |= (0b0100 << ((__DRIVERS_MPU6050_H_MPU6050_PIN_CL__ - 8) * 4)) |
+                    (0b0100 << ((__DRIVERS_MPU6050_H_MPU6050_PIN_DA__ - 8) * 4));
 
-    GPIOD->OTYPER |= (0b1 << MPU6050_PIN_CL) |
-                    (0b1 << MPU6050_PIN_DA);
+    GPIOD->OTYPER |= (0b1 << __DRIVERS_MPU6050_H_MPU6050_PIN_CL__) |
+                    (0b1 << __DRIVERS_MPU6050_H_MPU6050_PIN_DA__);
 
-    GPIOD->OSPEEDR |= (0b11 << (MPU6050_PIN_CL * 2)) |
-                        (0b11 << (MPU6050_PIN_DA * 2));
+    GPIOD->OSPEEDR |= (0b11 << (__DRIVERS_MPU6050_H_MPU6050_PIN_CL__ * 2)) |
+                        (0b11 << (__DRIVERS_MPU6050_H_MPU6050_PIN_DA__ * 2));
 
-    GPIOD->PUPDR |= (0b01 << (MPU6050_PIN_CL * 2)) |
-                        (0b01 << (MPU6050_PIN_DA * 2));
+    GPIOD->PUPDR |= (0b01 << (__DRIVERS_MPU6050_H_MPU6050_PIN_CL__ * 2)) |
+                        (0b01 << (__DRIVERS_MPU6050_H_MPU6050_PIN_DA__ * 2));
 
     I2C1->CR1 = I2C_CR1_SWRST;
 

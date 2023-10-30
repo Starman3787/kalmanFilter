@@ -1,6 +1,6 @@
-#ifndef MAIN_H__
-#define MAIN_H__
+#ifndef __MAIN_H__
+#define __MAIN_H__
 
-#define CORE_CLOCK      (16000000)
+#define __MAIN_H_CORE_CLOCK__       (16000000)
 
 #endif

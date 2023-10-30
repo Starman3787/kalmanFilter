@@ -1,12 +1,12 @@
-#ifndef DRIVERS_GTU7_H__
-#define DRIVERS_GTU7_H__
+#ifndef __DRIVERS_GTU7_H__
+#define __DRIVERS_GTU7_H__
 
 #include <stdint.h>
 
-#define GTU7_PIN_RX     (11)
-#define GTU7_PIN_TX     (10)
+#define __DRIVERS_GTU7_PIN_RX__     (11)
+#define __DRIVERS_GTU7_PIN_TX__     (10)
 
-#define GTU7_BAUD_RATE  (9600)
+#define __DRIVERS_GTU7_BAUD_RATE__  (9600)
 
 int8_t Gtu7_Init(void);
 
